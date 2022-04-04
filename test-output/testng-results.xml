@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-04-02T12:16:39 IST" name="Default suite" finished-at="2022-04-02T12:17:07 IST" duration-ms="28076">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.scenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runnerClass.TestRunner@1184ab05]" name="scenario" class="runnerClass.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-04-02T12:16:39 IST" name="Default test" finished-at="2022-04-02T12:17:07 IST" duration-ms="28076">
+      <class name="runnerClass.TestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runnerClass.TestRunner@1184ab05]" started-at="2022-04-02T12:16:39 IST" name="setUpClass" finished-at="2022-04-02T12:16:39 IST" duration-ms="414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="scenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runnerClass.TestRunner@1184ab05]" started-at="2022-04-02T12:16:39 IST" name="scenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-04-02T12:16:51 IST" duration-ms="11928" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate that the given WebElement having proper colorcontrast ratio"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Accessibility Testing for ColorContrast]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:819)
+at org.testng.Assert.assertEquals(Assert.java:829)
+at stepDefinition.StepDefinition.check_if_the_given_element_having_proper_colorcontrast_or_not(StepDefinition.java:79)
+at ✽.check if the WebElement is having proper colorcontrast ratio="XPATH://*[@id='w3loginbtn']"(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenario -->
+        <test-method signature="scenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runnerClass.TestRunner@1184ab05]" started-at="2022-04-02T12:16:51 IST" name="scenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-04-02T12:17:05 IST" duration-ms="13875" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate that the given WebElement having proper colorcontrast ratio"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Accessibility Testing for ColorContrast]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runnerClass.TestRunner@1184ab05]" started-at="2022-04-02T12:17:05 IST" name="tearDownClass" finished-at="2022-04-02T12:17:07 IST" duration-ms="1840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runnerClass.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
