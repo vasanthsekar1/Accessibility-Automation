@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Apr 02 12:16:39 IST 2022</td>
+<td>Started on:</td><td>Mon Apr 11 16:38:34 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28076 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1250 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,24 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runnerClass.TestRunner.tearDownClass()'><b>tearDownClass</b><br>Test class: runnerClass.TestRunner</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.teardown(StepDefinition.java:111)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1962865655", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1962865655'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.teardown(StepDefinition.java:111)
+</pre></div></td>
+<td>0</td>
+<td>runnerClass.TestRunner@1184ab05</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,40 +94,51 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runnerClass.TestRunner.scenario()'><b>scenario</b><br>Test class: runnerClass.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate that the given WebElement having proper colorcontrast ratio", "Optional[Accessibility Testing for ColorContrast]"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:819)
-	at org.testng.Assert.assertEquals(Assert.java:829)
-	at stepDefinition.StepDefinition.check_if_the_given_element_having_proper_colorcontrast_or_not(StepDefinition.java:79)
-	at ✽.check if the WebElement is having proper colorcontrast ratio=&quot;XPATH://*[@id=&apos;w3loginbtn&apos;]&quot;(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace836449498", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace836449498'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:819)
-	at org.testng.Assert.assertEquals(Assert.java:829)
-	at stepDefinition.StepDefinition.check_if_the_given_element_having_proper_colorcontrast_or_not(StepDefinition.java:79)
-	at ✽.check if the WebElement is having proper colorcontrast ratio=&quot;XPATH://*[@id=&apos;w3loginbtn&apos;]&quot;(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:6)
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.user_is_on_the_desired_webpage_in_the_browser(StepDefinition.java:29)
+	at ✽.user is on the desired webpage=&quot;https://www.w3schools.com/&quot; in the browser(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1299126654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1299126654'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.user_is_on_the_desired_webpage_in_the_browser(StepDefinition.java:29)
+	at ✽.user is on the desired webpage=&quot;https://www.w3schools.com/&quot; in the browser(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:5)
 </pre></div></td>
-<td>11</td>
+<td>0</td>
 <td>runnerClass.TestRunner@1184ab05</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<tr>
+<td title='runnerClass.TestRunner.scenario()'><b>scenario</b><br>Test class: runnerClass.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate that the given WebElement having proper Link/button Text", "Optional[Accessibility Testing for Link/button Text in w3schools HomePage]"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.user_is_on_the_desired_webpage_in_the_browser(StepDefinition.java:29)
+	at ✽.user is on the desired webpage=&quot;https://www.w3schools.com/&quot; in the browser(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/LinkOrButtonText_Feature.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1495257933", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1495257933'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.user_is_on_the_desired_webpage_in_the_browser(StepDefinition.java:29)
+	at ✽.user is on the desired webpage=&quot;https://www.w3schools.com/&quot; in the browser(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/LinkOrButtonText_Feature.feature:5)
+</pre></div></td>
+<td>0</td>
+<td>runnerClass.TestRunner@1184ab05</td></tr>
 <tr>
 <td title='runnerClass.TestRunner.scenario()'><b>scenario</b><br>Test class: runnerClass.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate that the given WebElement having proper colorcontrast ratio", "Optional[Accessibility Testing for ColorContrast]"</td>
-<td></td>
-<td>13</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.user_is_on_the_desired_webpage_in_the_browser(StepDefinition.java:29)
+	at ✽.user is on the desired webpage=&quot;https://www.w3schools.com/&quot; in the browser(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1547817015", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1547817015'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.user_is_on_the_desired_webpage_in_the_browser(StepDefinition.java:29)
+	at ✽.user is on the desired webpage=&quot;https://www.w3schools.com/&quot; in the browser(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:5)
+</pre></div></td>
+<td>0</td>
+<td>runnerClass.TestRunner@1184ab05</td></tr>
+<tr>
+<td title='runnerClass.TestRunner.scenario()'><b>scenario</b><br>Test class: runnerClass.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate that the given WebElement having proper Link/button Text", "Optional[Accessibility Testing for Link/button Text in w3schools HomePage]"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.user_is_on_the_desired_webpage_in_the_browser(StepDefinition.java:29)
+	at ✽.user is on the desired webpage=&quot;https://www.w3schools.com/&quot; in the browser(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/LinkOrButtonText_Feature.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace990684641", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace990684641'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;stepDefinition.StepDefinition.driver&quot; is null
+	at stepDefinition.StepDefinition.user_is_on_the_desired_webpage_in_the_browser(StepDefinition.java:29)
+	at ✽.user is on the desired webpage=&quot;https://www.w3schools.com/&quot; in the browser(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/LinkOrButtonText_Feature.feature:5)
+</pre></div></td>
+<td>0</td>
 <td>runnerClass.TestRunner@1184ab05</td></tr>
 </table><p>
 </body>

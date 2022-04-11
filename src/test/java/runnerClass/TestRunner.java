@@ -15,7 +15,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
         dryRun=false,
         monochrome=true,
         glue = {"stepDefinition"},
-        tags = "@Colorcontrast",
+        //tags = "@Colorcontrast",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/report.html",
@@ -25,13 +25,18 @@ import io.cucumber.testng.TestNGCucumberRunner;
                 })
 public class TestRunner{
     public WebDriver driver;
+    
+    
         
     private TestNGCucumberRunner testNGCucumberRunner;
    
   
     @BeforeClass(alwaysRun = true)
     public void setUpClass() {
+    	
+
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+        
     }
 
     @Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")

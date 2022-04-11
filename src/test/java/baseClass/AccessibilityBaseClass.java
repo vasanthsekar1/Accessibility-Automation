@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.Color;
 
-import static utils.Util .*;
+import utils.Util;
 
-public class AccessibilityBaseClass {
+public class AccessibilityBaseClass extends Util{
 	public static Boolean checkColourContrstOfButton(WebDriver driver,String locatorValue) {
 		WebElement element=driver.findElement(getLocatorValue(locatorValue));
 		String elementColor=Color.fromString(element.getCssValue("color")).asHex();
@@ -29,6 +29,7 @@ public class AccessibilityBaseClass {
 		
 		System.out.println(resultColor);
 		waitForPageTOLoad(2);
+		driver.navigate().back();
 		if(("#68b915").contains(resultColor)) {
 			return true;
 		}
@@ -37,4 +38,29 @@ public class AccessibilityBaseClass {
 		}
 	}
 
+	public static boolean checkLinkOrButtonText(WebDriver driver,String locator,String text ) {
+		Boolean arialabel=driver.findElement(getLocatorValue(locator)).getAttribute("aria-label")!=null?true:false;
+		String linkText=driver.findElement(getLocatorValue(locator)).getText().toString();
+		if(arialabel==true) {
+			String arialabelofElement=driver.findElement(getLocatorValue(locator)).getAttribute("aria-label").toString();
+			if(arialabelofElement.contains(text)) {
+				System.out.println("Aria-label is Matching");
+				return true;
+			}
+			else {
+				System.out.println("Aria-label is Not Matching");
+				return false;
+				
+			}
+		}
+		else if(linkText.contains(text)) {
+			System.out.println("LinkText is Matching");
+			return true;
+		}
+		else {
+			System.out.println("LinkText is Not Matching");
+			return false;
+		}
+		
+	}
 }

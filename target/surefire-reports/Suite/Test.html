@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Surefire test</title>
+<title>TestNG:  Test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 04 13:56:42 IST 2022</td>
+<td>Started on:</td><td>Wed Apr 06 18:30:57 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20941 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15649 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,21 +77,21 @@ function toggleAllBoxes() {
 <tr>
 <td title='runnerClass.TestRunner.scenario()'><b>scenario</b><br>Test class: runnerClass.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate that the given WebElement having proper colorcontrast ratio", "Optional[Accessibility Testing for ColorContrast]"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at stepDefinition.StepDefinition.check_if_the_given_element_having_proper_colorcontrast_or_not(StepDefinition.java:73)
+	at stepDefinition.StepDefinition.check_if_the_given_element_having_proper_colorcontrast_or_not(StepDefinition.java:85)
 	at ✽.check if the WebElement is having proper colorcontrast ratio=&quot;XPATH://*[@id=&apos;w3loginbtn&apos;]&quot;(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:6)
-... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1916139819", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1916139819'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1680365536", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1680365536'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:568)
 	at org.testng.Assert.assertEquals(Assert.java:578)
-	at stepDefinition.StepDefinition.check_if_the_given_element_having_proper_colorcontrast_or_not(StepDefinition.java:73)
+	at stepDefinition.StepDefinition.check_if_the_given_element_having_proper_colorcontrast_or_not(StepDefinition.java:85)
 	at ✽.check if the WebElement is having proper colorcontrast ratio=&quot;XPATH://*[@id=&apos;w3loginbtn&apos;]&quot;(file:///Users/apple/eclipse-workspace/Accessibility_Automation/src/test/java/features/ColorContrast_Feature.feature:6)
 </pre></div></td>
-<td>10</td>
-<td>runnerClass.TestRunner@22eeefeb</td></tr>
+<td>5</td>
+<td>runnerClass.TestRunner@2794eab6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -103,8 +103,18 @@ function toggleAllBoxes() {
 <tr>
 <td title='runnerClass.TestRunner.scenario()'><b>scenario</b><br>Test class: runnerClass.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate that the given WebElement having proper colorcontrast ratio", "Optional[Accessibility Testing for ColorContrast]"</td>
 <td></td>
-<td>7</td>
-<td>runnerClass.TestRunner@22eeefeb</td></tr>
+<td>2</td>
+<td>runnerClass.TestRunner@2794eab6</td></tr>
+<tr>
+<td title='runnerClass.TestRunner.scenario()'><b>scenario</b><br>Test class: runnerClass.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate that the given WebElement having proper Link/button Text", "Optional[Accessibility Testing for Link/button Text in w3schools HomePage]"</td>
+<td></td>
+<td>0</td>
+<td>runnerClass.TestRunner@2794eab6</td></tr>
+<tr>
+<td title='runnerClass.TestRunner.scenario()'><b>scenario</b><br>Test class: runnerClass.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate that the given WebElement having proper Link/button Text", "Optional[Accessibility Testing for Link/button Text in w3schools HomePage]"</td>
+<td></td>
+<td>0</td>
+<td>runnerClass.TestRunner@2794eab6</td></tr>
 </table><p>
 </body>
 </html>

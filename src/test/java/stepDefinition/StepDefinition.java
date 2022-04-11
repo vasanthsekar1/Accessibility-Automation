@@ -3,8 +3,6 @@ package stepDefinition;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,18 +10,32 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
-
-import baseClass.AccessibilityBaseClass;
-import io.cucumber.java.After;
-import io.cucumber.java.Scenario;
-import io.cucumber.java.en.*;
+import static baseClass.AccessibilityBaseClass .*;
+import io.cucumber.java.AfterAll;
+import io.cucumber.java.BeforeAll;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import runnerClass.TestRunner;
 
-public class StepDefinition extends AccessibilityBaseClass{
+
+public class StepDefinition extends TestRunner{
 	
-	public WebDriver driver;
-	@Given("user is on the desired webpage={string} in the browser={string}")
-	public void user_on_the_desired_Webpage_in_Browser(String URL, String browser){
+	public static WebDriver driver;
+	
+	
+	@Given("user is on the desired webpage={string} in the browser")
+	public void user_is_on_the_desired_webpage_in_the_browser(String URL) {
+		if(driver.getCurrentUrl()!=URL) {
+		driver.get(URL);
+		}
+	}
+	
+	
+	@BeforeAll()
+	public static void before_all() {
+		
+		String browser=System.getenv("Browser");
 		try {
 			if(browser.equalsIgnoreCase("Chrome")) {
 				ChromeOptions co=new ChromeOptions();
@@ -49,7 +61,7 @@ public class StepDefinition extends AccessibilityBaseClass{
 			else {
 				System.out.println("Invalid Browser Name");
 			}
-			driver.get(URL);
+			
 			driver.manage().window().maximize();
 			driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
 		}catch(Exception e) {
@@ -74,15 +86,28 @@ public class StepDefinition extends AccessibilityBaseClass{
 		}
 	    
 	}
+	@Then("check if the WebElement={string} is having proper link\\/button text={string}")
+	public void check_if_the_web_element_is_having_proper_link_button_text(String locator, String text) {
+		if(checkLinkOrButtonText(driver, locator, text)) {
+			System.out.println("The Link/Button text is Matching");
+			Assert.assertEquals(true, true);
+		}
+		else {
+			System.out.println("The Link/Button text is Not Matching");
+			Assert.assertEquals(false, true);
+			
+		}
+		
+	}
 	
-	
-	@After
-	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
-            byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png",scenario.getName().replace(" ","_"));    
-            
-        }
+	@AfterAll
+	public static void teardown() {
+		
+//		if (scenario.isFailed()) {
+//            byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+//            scenario.attach(screenshot, "image/png",scenario.getName().replace(" ","_"));    
+//            
+//        }
 		driver.quit();
 	}
 }

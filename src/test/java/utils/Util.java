@@ -48,4 +48,9 @@ public class Util {
 		WebElement element =(WebElement) js.executeScript(script);
 		return element;
 	}
+	
+	
+	public static void getDataFromExcel() {
+		
+	}
 }
