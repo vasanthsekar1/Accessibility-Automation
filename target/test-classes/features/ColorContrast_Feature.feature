@@ -7,5 +7,5 @@ Feature: Accessibility Testing for ColorContrast
 
     Examples: 
       | URL                        |  | WebElement                                   |
-      | https://www.w3schools.com/ |  | XPATH://*[@id='w3loginbtn']                  |
+      #| https://www.w3schools.com/ |  | XPATH://*[@id='w3loginbtn']                  |
       | https://www.w3schools.com/ |  | XPATH://*[@id='main']/div[2]/div/div[1]/a[3] |
