@@ -35,7 +35,8 @@ public class StepDefinition extends TestRunner{
 	@BeforeAll()
 	public static void before_all() {
 		
-		String browser=System.getenv("Browser");
+		//String browser=System.getenv("Browser");
+		String browser="Chrome";
 		try {
 			if(browser.equalsIgnoreCase("Chrome")) {
 				ChromeOptions co=new ChromeOptions();
