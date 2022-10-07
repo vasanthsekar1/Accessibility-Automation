@@ -15,7 +15,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
         dryRun=false,
         monochrome=true,
         glue = {"stepDefinition"},
-        //tags = "@Colorcontrast",
+        tags = "@Colorcontrast",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/report.html",
